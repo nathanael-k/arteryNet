@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nate/Desktop/gits/arteryNet/include/atery_net.h
+vector
+-
+
+/home/nate/Desktop/gits/arteryNet/src/atery_net.cpp
+../include/atery_net.h
+/home/nate/Desktop/gits/arteryNet/include/atery_net.h
+assert.h
+-
+
