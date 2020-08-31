@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nate/Desktop/gits/arteryNet/library.cpp" "/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles/arteryNet.dir/library.cpp.o"
+  "/home/nate/Desktop/gits/arteryNet/src/artery_net.cpp" "/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles/arteryNet.dir/src/artery_net.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -77,27 +77,27 @@ include CMakeFiles/arteryNet.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/arteryNet.dir/flags.make
 
-CMakeFiles/arteryNet.dir/library.cpp.o: CMakeFiles/arteryNet.dir/flags.make
-CMakeFiles/arteryNet.dir/library.cpp.o: ../library.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/arteryNet.dir/library.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arteryNet.dir/library.cpp.o -c /home/nate/Desktop/gits/arteryNet/library.cpp
+CMakeFiles/arteryNet.dir/src/artery_net.cpp.o: CMakeFiles/arteryNet.dir/flags.make
+CMakeFiles/arteryNet.dir/src/artery_net.cpp.o: ../src/artery_net.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/arteryNet.dir/src/artery_net.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arteryNet.dir/src/artery_net.cpp.o -c /home/nate/Desktop/gits/arteryNet/src/artery_net.cpp
 
-CMakeFiles/arteryNet.dir/library.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arteryNet.dir/library.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nate/Desktop/gits/arteryNet/library.cpp > CMakeFiles/arteryNet.dir/library.cpp.i
+CMakeFiles/arteryNet.dir/src/artery_net.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arteryNet.dir/src/artery_net.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nate/Desktop/gits/arteryNet/src/artery_net.cpp > CMakeFiles/arteryNet.dir/src/artery_net.cpp.i
 
-CMakeFiles/arteryNet.dir/library.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arteryNet.dir/library.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nate/Desktop/gits/arteryNet/library.cpp -o CMakeFiles/arteryNet.dir/library.cpp.s
+CMakeFiles/arteryNet.dir/src/artery_net.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arteryNet.dir/src/artery_net.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nate/Desktop/gits/arteryNet/src/artery_net.cpp -o CMakeFiles/arteryNet.dir/src/artery_net.cpp.s
 
 # Object files for target arteryNet
 arteryNet_OBJECTS = \
-"CMakeFiles/arteryNet.dir/library.cpp.o"
+"CMakeFiles/arteryNet.dir/src/artery_net.cpp.o"
 
 # External object files for target arteryNet
 arteryNet_EXTERNAL_OBJECTS =
 
-libarteryNet.a: CMakeFiles/arteryNet.dir/library.cpp.o
+libarteryNet.a: CMakeFiles/arteryNet.dir/src/artery_net.cpp.o
 libarteryNet.a: CMakeFiles/arteryNet.dir/build.make
 libarteryNet.a: CMakeFiles/arteryNet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libarteryNet.a"

@@ -1,5 +1,5 @@
-#ifndef ARTERYNET_ATERY_NET_H
-#define ARTERYNET_ATERY_NET_H
+#ifndef ARTERYNET_ARTERY_NET_H
+#define ARTERYNET_ARTERY_NET_H
 
 #define MAX_DEGREE 10
 #include <vector>
@@ -37,4 +37,4 @@ public:
 
 
 
-#endif //ARTERYNET_ATERY_NET_H
+#endif //ARTERYNET_ARTERY_NET_H

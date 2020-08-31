@@ -74,18 +74,100 @@ CMAKE_BINARY_DIR = /home/nate/Desktop/gits/arteryNet/cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/arteryNet.dir/all
+all: tests/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: tests/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/arteryNet.dir/clean
+clean: tests/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory tests
+
+# Recursive "all" directory target.
+tests/all: tests/CMakeFiles/tests.dir/all
+tests/all: tests/extern/googletest/all
+
+.PHONY : tests/all
+
+# Recursive "preinstall" directory target.
+tests/preinstall: tests/extern/googletest/preinstall
+
+.PHONY : tests/preinstall
+
+# Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/tests.dir/clean
+tests/clean: tests/extern/googletest/clean
+
+.PHONY : tests/clean
+
+#=============================================================================
+# Directory level rules for directory tests/extern/googletest
+
+# Recursive "all" directory target.
+tests/extern/googletest/all: tests/extern/googletest/googlemock/all
+
+.PHONY : tests/extern/googletest/all
+
+# Recursive "preinstall" directory target.
+tests/extern/googletest/preinstall: tests/extern/googletest/googlemock/preinstall
+
+.PHONY : tests/extern/googletest/preinstall
+
+# Recursive "clean" directory target.
+tests/extern/googletest/clean: tests/extern/googletest/googlemock/clean
+
+.PHONY : tests/extern/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory tests/extern/googletest/googlemock
+
+# Recursive "all" directory target.
+tests/extern/googletest/googlemock/all: tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+tests/extern/googletest/googlemock/all: tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+tests/extern/googletest/googlemock/all: tests/extern/googletest/googletest/all
+
+.PHONY : tests/extern/googletest/googlemock/all
+
+# Recursive "preinstall" directory target.
+tests/extern/googletest/googlemock/preinstall: tests/extern/googletest/googletest/preinstall
+
+.PHONY : tests/extern/googletest/googlemock/preinstall
+
+# Recursive "clean" directory target.
+tests/extern/googletest/googlemock/clean: tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+tests/extern/googletest/googlemock/clean: tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+tests/extern/googletest/googlemock/clean: tests/extern/googletest/googletest/clean
+
+.PHONY : tests/extern/googletest/googlemock/clean
+
+#=============================================================================
+# Directory level rules for directory tests/extern/googletest/googletest
+
+# Recursive "all" directory target.
+tests/extern/googletest/googletest/all: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+tests/extern/googletest/googletest/all: tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+
+.PHONY : tests/extern/googletest/googletest/all
+
+# Recursive "preinstall" directory target.
+tests/extern/googletest/googletest/preinstall:
+
+.PHONY : tests/extern/googletest/googletest/preinstall
+
+# Recursive "clean" directory target.
+tests/extern/googletest/googletest/clean: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+tests/extern/googletest/googletest/clean: tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+
+.PHONY : tests/extern/googletest/googletest/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/arteryNet.dir
@@ -113,6 +195,144 @@ arteryNet: CMakeFiles/arteryNet.dir/rule
 CMakeFiles/arteryNet.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/arteryNet.dir/build.make CMakeFiles/arteryNet.dir/clean
 .PHONY : CMakeFiles/arteryNet.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/tests.dir
+
+# All Build rule for target.
+tests/CMakeFiles/tests.dir/all: tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+tests/CMakeFiles/tests.dir/all: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+tests/CMakeFiles/tests.dir/all: tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target tests"
+.PHONY : tests/CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: tests/CMakeFiles/tests.dir/rule
+
+.PHONY : tests
+
+# clean rule for target.
+tests/CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/clean
+.PHONY : tests/CMakeFiles/tests.dir/clean
+
+#=============================================================================
+# Target rules for target tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+.PHONY : tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Build rule for subdir invocation for target.
+tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+.PHONY : gmock_main
+
+# clean rule for target.
+tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : tests/extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target tests/extern/googletest/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/all: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock"
+.PHONY : tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+.PHONY : gmock
+
+# clean rule for target.
+tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : tests/extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Target rules for target tests/extern/googletest/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/extern/googletest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/extern/googletest/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gtest"
+.PHONY : tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+tests/extern/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/extern/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+.PHONY : gtest
+
+# clean rule for target.
+tests/extern/googletest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : tests/extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/all: tests/extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+.PHONY : tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nate/Desktop/gits/arteryNet/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+.PHONY : gtest_main
+
+# clean rule for target.
+tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : tests/extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

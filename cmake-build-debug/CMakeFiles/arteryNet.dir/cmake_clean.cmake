@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/arteryNet.dir/library.cpp.o"
+  "CMakeFiles/arteryNet.dir/src/artery_net.cpp.o"
   "libarteryNet.a"
   "libarteryNet.pdb"
 )

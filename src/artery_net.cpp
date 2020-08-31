@@ -1,4 +1,4 @@
-#include "../include/atery_net.h"
+#include "../include/artery_net.h"
 
 #include <assert.h>
 
